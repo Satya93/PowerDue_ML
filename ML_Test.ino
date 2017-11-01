@@ -11,9 +11,10 @@ void setup() {
   Ml ml;
 
   ml.clear_all();
-  ml.append(200);
-  ml.append(100);
-  ml.append(300);
+  //ml.append(200);
+  //ml.append(100);
+  //ml.append(300);
+  ml.sample(500);
 
 }
 //------------------------------------------------------------------------------

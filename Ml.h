@@ -13,6 +13,9 @@ class Ml
     float average();
     float minimum();
     float maximum();
+    float std_dev();
+    void sample(int);
+    int get_data();
 
   protected:
     long _cnt;
@@ -20,5 +23,8 @@ class Ml
     float _sum;
     float _min;
     float _max;
+    float _mean;
+    float _stddev;
+    int _pin = 4;
 };
 #endif
