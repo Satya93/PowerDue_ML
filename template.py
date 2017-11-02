@@ -1,5 +1,16 @@
 from regression import regression
+from kmeans import split
 import time
+import random
 
-data = [1,10,20,30,40,50,60,70,80,90]
-print regression(data,0.04)
+data = []
+ele = 0
+while ele < 10:
+    data.append(random.randint(20,50))
+    ele+=1
+
+print data
+print 
+
+split(data,2)
+
