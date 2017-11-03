@@ -7,14 +7,15 @@
 
 void setup() {
   SerialUSB.begin(9600);
-  while(!SerialUSB);
+  while(!SerialUSB){
+  }
   Ml ml;
 
   ml.clear_all();
   //ml.append(200);
   //ml.append(100);
   //ml.append(300);
-  ml.sample(10);
+  ml.sample(100);
   ml.regression();
 
 }
