@@ -2,7 +2,7 @@ import time
 
 def regression(data,lim, alp):
     slp = 2
-    intercept = 10
+    intercept = sum(data)/len(data)
     alpha = alp
     numel = len(data)
     x = 0
@@ -25,15 +25,15 @@ def regression(data,lim, alp):
             totcost += cost
             x = x+1
         totcost = totcost/(2*numel)
-        print "At slope = ", slp, " and intercept = ", intercept, " Total cost is : ", totcost
+        print "At slope = ","%.2f" % slp, " and intercept = ", "%.2f" % intercept, " Total cost is : ", totcost
         #print totcost
         delta_0 = alpha*toterr_0/numel
         delta_1 = alpha*toterr_1/numel
         intercept = intercept-delta_0
         slp = slp-delta_1
-        time.sleep(0.1)
+        #time.sleep(0.01)
 
     for p in range(1, numel+1):
         val = slp*p+intercept
         print val
-    return slp*(numel+1)+intercept
+    return [slp,intercept]
