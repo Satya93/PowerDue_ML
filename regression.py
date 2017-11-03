@@ -31,7 +31,7 @@ def regression(data,lim, alp):
         delta_1 = alpha*toterr_1/numel
         intercept = intercept-delta_0
         slp = slp-delta_1
-        #time.sleep(0.01)
+        #time.sleep(1)
 
     for p in range(1, numel+1):
         val = slp*p+intercept
