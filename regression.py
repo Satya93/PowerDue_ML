@@ -1,7 +1,9 @@
-def regression(data,lim):
+import time
+
+def regression(data,lim, alp):
     slp = 2
     intercept = 10
-    alpha = 0.01
+    alpha = alp
     numel = len(data)
     x = 0
     toterr_0 = 0
@@ -29,6 +31,8 @@ def regression(data,lim):
         delta_1 = alpha*toterr_1/numel
         intercept = intercept-delta_0
         slp = slp-delta_1
+        time.sleep(0.1)
+
     for p in range(1, numel+1):
         val = slp*p+intercept
         print val
