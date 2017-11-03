@@ -13,4 +13,5 @@ print data
 print 
 
 split(data,2)
+print 
 

@@ -1,6 +1,7 @@
 def split(data, cat):
     numcat = cat
     numel = len(data)
+    
     gr = []
     cnt = 1
     while cnt < numcat+1:
