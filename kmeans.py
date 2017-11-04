@@ -1,6 +1,7 @@
 def split(data, cat):
     numcat = cat
     numel = len(data)
+    print numel
     
     gr = []
     cnt = 1
@@ -10,6 +11,7 @@ def split(data, cat):
         gr.append(label)
         cnt+=1
 
+    cnt = 0
     dist_local = []
     dist = []
     while cnt < numel:
@@ -26,6 +28,7 @@ def split(data, cat):
     mins = min(data)
     print "Minimum value : ",mins
     print "Maximum value : ",maxes
+    print len(dist)
     dist_from_largest = dist[data.index(maxes)]
     #print dist_from_largest
     #print max(dist_from_largest)
@@ -51,6 +54,8 @@ def split(data, cat):
             gr[1].append(data[dat_cnt])
         dat_cnt+=1
     print gr[0]
+    print len(gr[0])
     print gr[1]
+    print len(gr[1])
     #print data.index(maxes)
     #print data.index(mins)

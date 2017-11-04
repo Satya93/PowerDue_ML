@@ -1,17 +1,12 @@
 from regression import regression
+from datasets import linear_with_disturbance as ld
 from kmeans import split
 import time
 import random
 
-data = []
-ele = 0
-while ele < 10:
-    data.append(random.randint(20,50))
-    ele+=1
-
-print data
-print 
+data = ld()
 
 split(data,2)
+#regression(data, 3.7, 0.00058)
 print 
 
