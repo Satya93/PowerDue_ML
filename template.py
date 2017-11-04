@@ -1,10 +1,9 @@
 from regression import regression
-from datasets import linear_with_disturbance as ld
+import datasets as db
 from kmeans import split
 import time
-import random
 
-data = ld()
+data = db.randgen(100,0,100)
 
 split(data,2)
 #regression(data, 3.7, 0.00058)
